@@ -4,7 +4,7 @@ export function middleware(req: NextRequest, ev: NextFetchEvent) {
   const { '@tfy:ath': token } = req.cookies
   const pathname = req.page.name?.slice(1)
 
-  if (!!token) {
+  if (pathname === 'log' && !token) {
     console.log(token)
     const url = req.nextUrl.clone()
     url.pathname = '/log'
