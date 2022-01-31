@@ -6,7 +6,9 @@ export function middleware(req: NextRequest, ev: NextFetchEvent) {
 
   if (!!token) {
     console.log(token)
-    return NextResponse.redirect(`/login?redirectPath=${pathname}`)
+    const url = req.nextUrl.clone()
+    url.pathname = '/log'
+    return NextResponse.rewrite(url)
   }
   // if (pathname && authenticatedPages.includes(pathname) && !token) {
   //   return NextResponse.redirect(`/login?redirectPath=${pathname}`)
