@@ -1,4 +1,4 @@
-import { NextFetchEvent, NextRequest } from 'next/server'
+import { NextFetchEvent, NextRequest, NextResponse } from 'next/server'
 
 export function middleware(req: NextRequest, ev: NextFetchEvent) {
   const { '@tfy:ath': token } = req.cookies
@@ -6,7 +6,7 @@ export function middleware(req: NextRequest, ev: NextFetchEvent) {
 
   if (!!token) {
     console.log(token)
-    return new Response('Oi middleware: ' + token)
+    return NextResponse.redirect(`/login?redirectPath=${pathname}`)
   }
   // if (pathname && authenticatedPages.includes(pathname) && !token) {
   //   return NextResponse.redirect(`/login?redirectPath=${pathname}`)
