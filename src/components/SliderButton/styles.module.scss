@@ -1,0 +1,25 @@
+.sliderButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+
+  position: absolute;
+  height: 15.625rem;
+  width: 2.5rem;
+  bottom: 0;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.prev {
+  left: -1rem;
+}
+
+.next {
+  right: -1rem;
+}
