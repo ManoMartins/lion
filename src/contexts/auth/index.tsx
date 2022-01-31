@@ -126,7 +126,7 @@ export const AuthContextProvider: React.FC = ({ children }) => {
   const changeUser = useCallback(
     (user: User): void => {
       if (!api.defaults.headers.common.Authorization) return
-      const token = api.defaults.headers.common.Authorization.split(' ')[1]
+      const token = (api.defaults.headers.common.Authorization as string).split(' ')[1]
       setUser(user)
       setAuthDataToCookie({ user, token: token })
     },
