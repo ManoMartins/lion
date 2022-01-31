@@ -1,6 +1,5 @@
 .tagsListContainer {
   position: relative;
-
   transition: transform 300ms ease 100ms;
 
   .title {
@@ -12,6 +11,7 @@
 
 .tagsListContent {
   display: flex;
+  overflow: hidden;
 
   div + div {
     margin-left: 0.25rem;

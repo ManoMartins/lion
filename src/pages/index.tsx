@@ -1,17 +1,13 @@
-import { TagsList } from '../components/Tags/List'
+import { useAuth } from '../contexts/auth';
 import styles from '../styles/home.module.scss';
 
 export default function Home() {
+  const { logIn, logOut } = useAuth()
+
   return (
     <div className={styles.homeContainer}>
-      <TagsList tags={[
-        { title: 'Software engineer', totalNotes: 20, nextReview: '2022-02-20' },
-        { title: 'English', totalNotes: 120, nextReview: '2022-02-01' },
-        { title: 'French', totalNotes: 230, nextReview: '2022-02-02' },
-        { title: 'French', totalNotes: 230, nextReview: '2022-02-02' },
-        { title: 'French', totalNotes: 230, nextReview: '2022-02-02' },
-        { title: 'French', totalNotes: 230, nextReview: '2022-02-02' },
-      ]} />
+      <button onClick={() => logIn()}>Login</button>
+      <button onClick={() => logOut()}>logOut</button>
     </div>
 )
 }
