@@ -89,7 +89,7 @@ export const AuthContextProvider: React.FC = ({ children }) => {
         if (router.query.redirectPath) {
           router.push(`/${router.query.redirectPath}`)
         } else {
-          router.push('/log')
+          router.push('/for')
         }
 
       } catch (error: unknown) {
