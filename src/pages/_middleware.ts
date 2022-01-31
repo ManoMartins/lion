@@ -7,7 +7,7 @@ export function middleware(req: NextRequest, ev: NextFetchEvent) {
   if (pathname === 'log' && !token) {
     console.log(token)
     const url = req.nextUrl.clone()
-    url.pathname = '/log'
+    url.pathname = '/'
     return NextResponse.rewrite(url)
   }
   // if (pathname && authenticatedPages.includes(pathname) && !token) {
