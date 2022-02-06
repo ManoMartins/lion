@@ -13,8 +13,8 @@ export default function Home() {
         canonical='https://lion-gamma.vercel.app'
         openGraph={{
           url: 'https://lion-gamma.vercel.app',
-          title: 'Home',
-          description: 'Home page',
+          title: 'Home page OP ',
+          description: 'Home page - OP description',
           images: [
             {
               url: 'https://unsplash.com/photos/S97RBrJnWiI',
