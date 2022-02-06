@@ -17,9 +17,7 @@ export default function Home() {
           description: 'Home page - OP description',
           images: [
             {
-              url: 'https://unsplash.com/photos/S97RBrJnWiI',
-              width: 800,
-              height: 600,
+              url: 'https://images.unsplash.com/photo-1578166375397-5711fb282325?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80',
               alt: 'Home page',
             },
           ],
