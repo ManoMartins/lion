@@ -1,11 +1,16 @@
+import { DefaultSeo } from 'next-seo'
+import SEO from '../../next-seo.config'
 import { AuthContextProvider } from '../contexts/auth'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <AuthContextProvider>
-      <Component {...pageProps} />
-    </AuthContextProvider>
+    <>
+      <DefaultSeo {...SEO} />
+      <AuthContextProvider>
+        <Component {...pageProps} />
+      </AuthContextProvider>
+    </>
   )
 }
 
